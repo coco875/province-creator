@@ -18,5 +18,6 @@ with open("definition.csv", "a") as file:
         while new_color in color:
             new_color = [str(random.randint(0,255)),str(random.randint(0,255)),str(random.randint(0,255))]
         l = [str(len(color)+i)]+new_color+ default
-        s = "".join(j+";" for j in l)+"\n"
+        s = "".join(j+";" for j in l)
+        s = s[:-1]+"\n"
         file.write(s)
